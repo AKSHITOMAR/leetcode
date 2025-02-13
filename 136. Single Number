@@ -1,0 +1,16 @@
+Constraints:
+-> 1 <= nums.length <= 3 * 104
+-> -3 * 104 <= nums[i] <= 3 * 104
+-> Each element in the array appears twice except for one element which appears only once.
+
+CODE---------
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int result=0;
+        for(int i=0;i<nums.size();i++){
+            result=result^nums[i];
+        }   
+        return result;
+        }
+};
